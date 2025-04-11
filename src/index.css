@@ -1,0 +1,9 @@
+* {
+  font-family: 'Inter Tight', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  min-height: 100vh;
+}
