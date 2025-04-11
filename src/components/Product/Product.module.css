@@ -1,0 +1,38 @@
+.product {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 0.2rem solid;
+    border-color: #202588;
+    width: 25rem;
+    overflow: hidden;
+}
+
+.product img {
+    width: auto;
+    transition: 0.3s ease;
+}
+
+.product img:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    .product {
+        width: 20rem;
+    }
+}
+
+.info {
+    padding: 1.5rem;
+}
+
+.price {
+    color: #202588;
+    font-size: larger;
+}
+
+.price:hover{
+    color: #04062e;
+}

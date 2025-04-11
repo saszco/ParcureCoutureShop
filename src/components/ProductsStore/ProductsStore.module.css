@@ -1,0 +1,44 @@
+.productsStore {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    list-style: none;
+    margin: auto;
+    padding: 0;
+    padding-top: 2rem;
+}
+
+.stock_p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stock_p h1{
+    font-size: xx-large;
+    margin: 0;
+}
+
+.stock_p p{
+    font-size: x-large
+}
+
+.stock_p span {
+    font-weight: 900;
+    color: #202588;
+    transition: 0.8s ease;
+}
+
+.stock_p span:hover{
+    color: rgb(203, 147, 255);
+}

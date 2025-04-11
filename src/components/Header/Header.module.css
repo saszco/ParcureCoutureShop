@@ -1,34 +1,35 @@
-header {
+.header_section {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin: 2rem;
     border: 0.2rem solid;
-    padding: 1rem;
+    padding: 1rem; 
     background-color: transparent;
     border-color: #202588;
 }
 
-img {
+.header_section img {
     width: 6rem;
     margin-right: 1rem;
 }
 
-.logo {
+.header_section .logo {
     display: flex;
     align-items: center;
 }
 
-span {
+.header_section span {
     font-weight:100;
     text-transform: lowercase;
 }
 
-h1 {
+.header_section h1 {
     text-transform: uppercase;
 }
 
-p {
+.header_section p {
     border: 0.2rem solid;
     border-color: #202588;
     display: flex;
@@ -38,12 +39,12 @@ p {
     padding-inline: 1rem;
 }
 
-p:hover{
+.header_section p:hover{
     border-color: #ffeec0;
     transition: 0.3s 100ms;
 }
 
-button {
+.header_section button {
     margin-left: 1rem;
     font-size: 1.2rem;
     background-color: transparent;
