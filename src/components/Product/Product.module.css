@@ -5,6 +5,7 @@
     justify-content: space-between;
     border: 0.2rem solid;
     border-color: #202588;
+    border-radius: 1rem;
     width: 25rem;
     overflow: hidden;
 }

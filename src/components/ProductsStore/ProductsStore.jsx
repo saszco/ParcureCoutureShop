@@ -13,7 +13,7 @@ export default function ProductsStore() {
         <p>The best collection by Arture <span>Parcure</span> Couture. <span>Inspired by Fusion</span></p>
       </div>
       <div>
-        {isLoading && <p>Loading data..</p>}
+        {isLoading && <p className={styles.loading_p}>Loading data..</p>}
         {products && (
           <ul className={styles.products}>
             {products.map((product) => (

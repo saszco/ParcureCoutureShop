@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { ProductContext } from "../../store/product-context";
 import styles from "./Product.module.css";
+import { Button } from "antd";
 
 export default function Product({ id, name, price, description, image_url }) {
   return (
@@ -12,6 +13,7 @@ export default function Product({ id, name, price, description, image_url }) {
           <p className={styles.price}>${price}</p>
         </div>
         <p>{description}</p>
+        <Button variant="outlined" size="large">Add to cart</Button>
       </div>
     </div>
   );

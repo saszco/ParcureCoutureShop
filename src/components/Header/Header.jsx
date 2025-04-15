@@ -1,8 +1,21 @@
+import { useState } from 'react';
 import styles from './Header.module.css'
 
 export default function Header() {
+
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  function Scrolling() {
+    if (window.scrollY >= 130) {
+      setIsScrolling(true);
+    } else setIsScrolling(false);
+  }
+
+  window.addEventListener("scroll", Scrolling)
+
     return (
-      <header className={styles.header_section}>
+      <div className={isScrolling ? styles.header_container_fixed : styles.header_container}>
+        <section className={styles.header_section}>
         <div className={styles.logo}>
           <img src="/birkin-logo.png" />
           <h1>
@@ -13,6 +26,7 @@ export default function Header() {
           <i className="fa-solid fa-bag-shopping"></i>
           <button>Cart ()</button>
         </p>
-      </header>
+      </section>
+      </div>
     );
 }

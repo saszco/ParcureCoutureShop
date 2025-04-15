@@ -13,7 +13,7 @@ export function ProductContextProvider({ children }) {
     async function fetchProducts() {
       try {
         const response = await fetch(
-          "http://localhost:3000/parcurecouture/products"
+          "http://localhost:3000/products"
         );
         if (!response.ok) {
           throw new Error("Failed to fetch products");
