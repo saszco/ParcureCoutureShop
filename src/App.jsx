@@ -9,9 +9,7 @@ export default function App() {
     <>
       <Header />
       <ProductContextProvider>
-        <CartContextProvider>
           <ProductsStore />
-        </CartContextProvider>
       </ProductContextProvider>
       <AboutBrand />
     </>

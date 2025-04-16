@@ -6,7 +6,7 @@ import { Button } from "antd";
 export default function Product({ id, name, price, description, image_url }) {
   return (
     <div className={styles.product}>
-      <img src={image_url} alt="This is an image of Arture Couture bag" />
+      <img src={`http://localhost:3000${image_url}`} alt="This is an image of Arture Couture bag" />
       <div className={styles.info}>
         <div>
           <h2>{name}</h2>

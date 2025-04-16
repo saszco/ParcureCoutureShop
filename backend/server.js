@@ -1,18 +1,16 @@
-import 'dotenv/config';
+require('dotenv').config();
+const app = require('./app.js')
+const mongoose = require('mongoose');
 
-import app from './app.js';
-import runDbMigrations from './db/migrations/index.js';
+mongoose
+  .connect(process.env.MONGO_URL)
+  .then(() => {
+    console.log("Connected to MongoDB Atlas");
+  })
+  .catch((error) => {
+    console.log("MongoDB connection error:", error);
+  });
 
-async function start() {
-
-    await runDbMigrations();
-    console.log('Starting server...');
-
-    const port = process.env.PORT || 3000;
-
-    app.listen(port, () => {
-        console.log(`Server is running on port ${port}`);
-    })
-}
-
-start();
+app.listen(3000, () => {
+    console.log(`Server is running on port 3000`);
+} )

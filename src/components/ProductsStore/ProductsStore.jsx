@@ -6,6 +6,8 @@ import styles from './ProductsStore.module.css';
 export default function ProductsStore() {
   const { products, isLoading } = use(ProductContext);
 
+  console.log(products)
+
   return (
     <section className={styles.productsStore}>
       <div className={styles.stock_p}>
@@ -17,7 +19,7 @@ export default function ProductsStore() {
         {products && (
           <ul className={styles.products}>
             {products.map((product) => (
-              <li key={product.id}>
+              <li key={product._id}>
                 <Product {...product} />
               </li>
             ))}
