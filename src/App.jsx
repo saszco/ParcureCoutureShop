@@ -7,9 +7,11 @@ import { CartContextProvider } from "./store/shopping-cart-context.jsx";
 export default function App() {
   return (
     <>
-      <Header />
       <ProductContextProvider>
+        <CartContextProvider>
+          <Header />
           <ProductsStore />
+        </CartContextProvider>
       </ProductContextProvider>
       <AboutBrand />
     </>

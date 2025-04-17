@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './Header.module.css'
+import CartButton from '../ui/CartButton/CartButton';
 
 export default function Header() {
 
@@ -22,10 +23,7 @@ export default function Header() {
             Parcure <span>Couture.</span>
           </h1>
         </div>
-        <p>
-          <i className="fa-solid fa-bag-shopping"></i>
-          <button>Cart ()</button>
-        </p>
+        <CartButton/>
       </section>
       </div>
     );

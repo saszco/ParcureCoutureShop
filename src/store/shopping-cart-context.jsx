@@ -12,7 +12,7 @@ function shoppingCartReducer(state, action) {
     const updatedItems = [...state.items];
 
     const existingCartItemIndex = updatedItems.findIndex(
-      (cartItem) => cartItem.id === action.payload.productId
+      (cartItem) => cartItem._id === action.payload.productId
     );
 
     const existingCartItem = updatedItems[existingCartItemIndex];
@@ -25,10 +25,10 @@ function shoppingCartReducer(state, action) {
       updatedItems[existingCartItemIndex] = updatedItem;
     } else {
       const product = action.payload.products.find(
-        (product) => product.id === action.payload.productId
+        (product) => product._id === action.payload.productId
       );
       updatedItems.push({
-        id: product.id,
+        _id: product._id,
         name: product.name,
         price: product.price,
         quantity: 1,
@@ -44,7 +44,7 @@ function shoppingCartReducer(state, action) {
     const updatedItems = [...state.items];
 
     const updatedItemIndex = updatedItems.findIndex(
-      (cartItem) => cartItem.id === action.payload.productId
+      (cartItem) => cartItem._id === action.payload.productId
     );
 
     const updatedItem = {
@@ -68,7 +68,7 @@ function shoppingCartReducer(state, action) {
 }
 
 export function CartContextProvider({ children }) {
-  const { products } = useContext(ProductContext);
+  const { products, isLoading } = useContext(ProductContext);
 
   const [shoppingCartState, shoppingCartDispatch] = useReducer(
     shoppingCartReducer,
@@ -78,6 +78,7 @@ export function CartContextProvider({ children }) {
   );
 
   function handleAddItemToCart(productId) {
+    if (!products) return;
     shoppingCartDispatch({
       type: "ADD_ITEM",
       payload: {
@@ -103,5 +104,7 @@ export function CartContextProvider({ children }) {
     updateItemQuantity: handleUpdateCartItemQuantity,
   };
 
-  return <CartContextProvider value={ctxValue}>{children}</CartContextProvider>;
+  if (isLoading || !products) return null;
+
+  return <CartContext value={ctxValue}>{children}</CartContext>;
 }

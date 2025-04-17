@@ -6,8 +6,6 @@ import styles from './ProductsStore.module.css';
 export default function ProductsStore() {
   const { products, isLoading } = use(ProductContext);
 
-  console.log(products)
-
   return (
     <section className={styles.productsStore}>
       <div className={styles.stock_p}>

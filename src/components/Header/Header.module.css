@@ -52,23 +52,4 @@
     text-transform: uppercase;
 }
 
-.header_section p {
-    border: 0.2rem solid;
-    border-radius: 1rem;
-    border-color: #202588;
-    display: flex;
-    align-items: center;
-    margin-right: 1rem;
-    padding: 1rem 1rem;
-    padding-inline: 1rem;
-}
-
-.header_section button {
-    margin-left: 1rem;
-    font-size: 1.2rem;
-    background-color: transparent;
-    border: none;
-    color: #202588;
-}
-
 /* #202588 */
