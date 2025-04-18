@@ -12,8 +12,8 @@ export default function App() {
           <Header />
           <ProductsStore />
         </CartContextProvider>
+        <AboutBrand />
       </ProductContextProvider>
-      <AboutBrand />
     </>
   );
 }

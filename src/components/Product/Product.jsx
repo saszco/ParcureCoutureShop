@@ -15,7 +15,7 @@ export default function Product({ _id, name, price, description, image_url }) {
           <p className={styles.price}>${price}</p>
         </div>
         <p>{description}</p>
-        <Button variant="outlined" size="large" onClick={() => addItemToCart(_id)}>Add to cart</Button>
+        <Button variant="outlined" size="large" onClick={() => addItemToCart(_id)}><i className="fa fa-shopping-cart"></i>Add to cart</Button>
       </div>
     </div>
   );

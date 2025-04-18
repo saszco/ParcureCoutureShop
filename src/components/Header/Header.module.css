@@ -52,4 +52,16 @@
     text-transform: uppercase;
 }
 
+@media screen and (max-width: 558px) {
+    .header_section img{
+        width: 3rem;
+        margin-left: 1rem;
+    }
+
+    .header_section{
+        padding-block: 0;
+        padding-inline: 1rem;
+    }
+}
+
 /* #202588 */

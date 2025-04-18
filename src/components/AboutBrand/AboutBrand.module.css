@@ -27,6 +27,7 @@
 .description_container h1{
     font-size: xx-large;
     font-weight: 900;
+    margin: 0;
 }
 
 .description_container p{
@@ -40,4 +41,39 @@
 
 .description_container h2{
     color: hsl(135, 100%, 27%);
+    margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .about_section {
+        height: 55vh;
+        gap: 3rem
+    }
+    .about_section img {
+        height: 55vh;
+    }
+    .description_container{
+        margin-right: 2rem;
+    }    
+}
+
+@media screen and (max-width: 768px) {
+    .about_section {
+        flex-direction: column-reverse;
+        height: auto;
+        gap: 1.5rem;
+    }
+
+    .about_section img{
+        height: 55vh;
+    }
+
+    .description_container{
+        width: auto;
+        margin-inline: 2rem;
+    }
+
+    .description_container h1{
+        margin-top: 2rem;
+    }
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './Header.module.css'
-import CartButton from '../ui/CartButton/CartButton';
+import CartButton from '../CartButton/CartButton';
 
 export default function Header() {
 
